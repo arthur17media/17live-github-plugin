@@ -1,0 +1,27 @@
+{
+  "name": "17 Live Github Plugins",
+  "short_name": "17live",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "assets/logo-17media.png"
+  },
+  "background": {
+    "scripts": [
+      "netlify/background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": ["https://github.com/17media/17live/pull/*"],
+    "css": ["netlify/app.css"],
+    "js": ["netlify/app.js"]
+  }],
+  "web_accessible_resources": [
+    "assets/logo-netlify.png"
+  ],
+  "permissions": [
+    "https://github.com/17media/17live/pull/*",
+    "tabs",
+    "webNavigation"
+  ]
+}

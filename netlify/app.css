@@ -1,0 +1,8 @@
+.LogoNetlify__Wrapper {
+  position: relative;
+}
+
+.LogoNetlify__Wrapper .LogoNetlify__Logo {
+  position: absolute;
+  height: 25px;
+}
