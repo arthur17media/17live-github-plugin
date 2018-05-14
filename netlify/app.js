@@ -1,10 +1,12 @@
 (function() {
   let curPathname;
+  const paths = window.location.href.split('/');
+  const is17LiveRepo = paths.includes('17live') && paths.includes('17media');
 
   injectPreviewNetlify();
 
   function injectPreviewNetlify() {
-    if (window.location.pathname === curPathname) {
+    if (window.location.pathname === curPathname || !is17LiveRepo) {
       return;
     }
 
